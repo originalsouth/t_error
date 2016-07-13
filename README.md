@@ -57,6 +57,46 @@ You can run a demo by typing:
 ```
 make demo
 ```
+It should produce something like:
+```
+Normal
+Hello World!
+
+Assert errors
+Hello World!
+[ 0.000032687s ] t_error: t_error.cc:21 in main: Oh no! The world stopped turning :(
+t_error: caused the program to terminate.
+
+Assert warnings (and errors)
+[ 0.000020674s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
+Hello World!
+[ 0.000039183s ] t_error: t_error.cc:21 in main: Oh no! The world stopped turning :(
+t_error: caused the program to terminate.
+
+Assert debug messeges up until level 1 (error and warnings)
+[ 0.000015925s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
+[ 0.000036319s ] t_debug[0]: t_error.cc:17 in main: Clean the machine it's full of bugs.
+Hello World!
+[ 0.000060206s ] t_error: t_error.cc:21 in main: Oh no! The world stopped turning :(
+t_error: caused the program to terminate.
+
+Assert debug messeges up until level 2 (error and warnings)
+[ 0.000015645s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
+[ 0.000033036s ] t_debug[0]: t_error.cc:17 in main: Clean the machine it's full of bugs.
+Hello World!
+[ 0.000053570s ] t_debug[1]: t_error.cc:19 in main: Have you cleaned that buggy machine yet?
+[ 0.000058320s ] t_error: t_error.cc:21 in main: Oh no! The world stopped turning :(
+t_error: caused the program to terminate.
+
+Assert debug messeges up until level 3 (error and warnings)
+[ 0.000020744s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
+[ 0.000042395s ] t_debug[0]: t_error.cc:17 in main: Clean the machine it's full of bugs.
+Hello World!
+[ 0.000064536s ] t_debug[1]: t_error.cc:19 in main: Have you cleaned that buggy machine yet?
+[ 0.000069215s ] t_debug[2]: t_error.cc:20 in main: All I hear is bzzzz bzzzzzzzzzzzz...
+[ 0.000075571s ] t_error: t_error.cc:21 in main: Oh no! The world stopped turning :(
+t_error: caused the program to terminate.
+```
 To clean run:
 ```
 make clean
