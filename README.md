@@ -41,7 +41,7 @@ DEBUG(0,"Some level 0 debug message nr. %d",93);
 DEBUG(1,"Some level 1 debug message nr. %d",94);
 ...
 ```
-Where 0 is the debug level.
+Where initial integer is the debug level.
 By default errors and warnings are printed to stderr.
 Debug messages are printed to stdout.
 In both cases file pointer can be assigned by the user.
@@ -64,37 +64,37 @@ Hello World!
 
 Assert errors
 Hello World!
-[ 0.000032687s ] t_error: t_error.cc:21 in main: Oh no! The world stopped turning :(
+[ 0.000030871s ] t_error: t_error.cc:21 in main: Oh no! error #42 occured: The world stopped turning :(
 t_error: caused the program to terminate.
 
 Assert warnings (and errors)
-[ 0.000020674s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
+[ 0.000020045s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
 Hello World!
-[ 0.000039183s ] t_error: t_error.cc:21 in main: Oh no! The world stopped turning :(
+[ 0.000053081s ] t_error: t_error.cc:21 in main: Oh no! error #42 occured: The world stopped turning :(
 t_error: caused the program to terminate.
 
 Assert debug messeges up until level 1 (error and warnings)
-[ 0.000015925s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
-[ 0.000036319s ] t_debug[0]: t_error.cc:17 in main: Clean the machine it's full of bugs.
+[ 0.000018020s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
+[ 0.000037506s ] t_debug[0]: t_error.cc:17 in main: Clean the machine it's full of bugs.
 Hello World!
-[ 0.000060206s ] t_error: t_error.cc:21 in main: Oh no! The world stopped turning :(
+[ 0.000062650s ] t_error: t_error.cc:21 in main: Oh no! error #42 occured: The world stopped turning :(
 t_error: caused the program to terminate.
 
 Assert debug messeges up until level 2 (error and warnings)
-[ 0.000015645s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
-[ 0.000033036s ] t_debug[0]: t_error.cc:17 in main: Clean the machine it's full of bugs.
+[ 0.000017391s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
+[ 0.000036039s ] t_debug[0]: t_error.cc:17 in main: Clean the machine it's full of bugs.
 Hello World!
-[ 0.000053570s ] t_debug[1]: t_error.cc:19 in main: Have you cleaned that buggy machine yet?
-[ 0.000058320s ] t_error: t_error.cc:21 in main: Oh no! The world stopped turning :(
+[ 0.000058529s ] t_debug[1]: t_error.cc:19 in main: Have you cleaned that buggy machine yet?
+[ 0.000063767s ] t_error: t_error.cc:21 in main: Oh no! error #42 occured: The world stopped turning :(
 t_error: caused the program to terminate.
 
 Assert debug messeges up until level 3 (error and warnings)
-[ 0.000020744s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
-[ 0.000042395s ] t_debug[0]: t_error.cc:17 in main: Clean the machine it's full of bugs.
+[ 0.000019207s ] t_waring: t_error.cc:16 in main: You can try, but nobody is listening...
+[ 0.000046236s ] t_debug[0]: t_error.cc:17 in main: Clean the machine it's full of bugs.
 Hello World!
-[ 0.000064536s ] t_debug[1]: t_error.cc:19 in main: Have you cleaned that buggy machine yet?
-[ 0.000069215s ] t_debug[2]: t_error.cc:20 in main: All I hear is bzzzz bzzzzzzzzzzzz...
-[ 0.000075571s ] t_error: t_error.cc:21 in main: Oh no! The world stopped turning :(
+[ 0.000069913s ] t_debug[1]: t_error.cc:19 in main: Have you cleaned that buggy machine yet?
+[ 0.000074523s ] t_debug[2]: t_error.cc:20 in main: All I hear is bzzzz bzzzzzzzzzzzz...
+[ 0.000081018s ] t_error: t_error.cc:21 in main: Oh no! error #42 occured: The world stopped turning :(
 t_error: caused the program to terminate.
 ```
 To clean run:
