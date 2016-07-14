@@ -1,11 +1,11 @@
 .SILENT: demo
 t_error: t_error.cc t_error.h
-	g++ -Wall -Werror -std=c++11 -O3 -flto -o t_error t_error.cc
-	g++ -Wall -Werror -std=c++11 -O3 -flto -D T_ERROR -o t_error_error t_error.cc
-	g++ -Wall -Werror -std=c++11 -O3 -flto -D T_ERROR -D T_WARNING -o t_error_warning t_error.cc
-	g++ -Wall -Werror -std=c++11 -O3 -flto -D T_ERROR -D T_WARNING -D T_DEBUG=1 -o t_error_debug-1 t_error.cc
-	g++ -Wall -Werror -std=c++11 -O3 -flto -D T_ERROR -D T_WARNING -D T_DEBUG=2 -o t_error_debug-2 t_error.cc
-	g++ -Wall -Werror -std=c++11 -O3 -flto -D T_ERROR -D T_WARNING -D T_DEBUG=3 -o t_error_debug-3 t_error.cc
+	g++ -Wall -Wextra -std=c++11 -O3 -flto -o t_error t_error.cc
+	g++ -Wall -Wextra -std=c++11 -O3 -flto -D T_ERROR -o t_error_error t_error.cc
+	g++ -Wall -Wextra -std=c++11 -O3 -flto -D T_ERROR -D T_WARNING -o t_error_warning t_error.cc
+	g++ -Wall -Wextra -std=c++11 -O3 -flto -D T_ERROR -D T_WARNING -D T_DEBUG=1 -o t_error_debug-1 t_error.cc
+	g++ -Wall -Wextra -std=c++11 -O3 -flto -D T_ERROR -D T_WARNING -D T_DEBUG=2 -o t_error_debug-2 t_error.cc
+	g++ -Wall -Wextra -std=c++11 -O3 -flto -D T_ERROR -D T_WARNING -D T_DEBUG=3 -o t_error_debug-3 t_error.cc
 
 demo: t_error
 	echo "Normal"
