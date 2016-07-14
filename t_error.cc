@@ -18,6 +18,6 @@ int main()
     printf("Hello World!\n");
     DEBUG(1,"Have you cleaned that buggy machine yet?");
     DEBUG(2,"All I hear is bzzzz bzzzzzzzzzzzz...");
-    ERROR("Oh no! The world stopped turning :(");
+    ERROR("Oh no! error #%d occured: The world stopped turning :(",052);
     return EXIT_SUCCESS;
 }
