@@ -13,11 +13,11 @@
 
 int main()
 {
-    WARNING("You can try, but nobody is listening...");
-    DEBUG(0,"Clean the machine it's full of bugs.");
-    printf("Hello World!\n");
-    DEBUG(1,"Have you cleaned that buggy machine yet?");
-    DEBUG(2,"All I hear is bzzzz bzzzzzzzzzzzz...");
-    ERROR("Oh no! error #%d occured: The world stopped turning :(",052);
+    __WARNING__("You can try, but nobody is listening...");
+    __DEBUG__(0,"Clean the machine it's full of bugs.");
+    printf("%s\n",t_error::colorize(t_error::t_colors::GREEN,"Hello World!").c_str());
+    __DEBUG__(1,"Have you cleaned that buggy machine yet?");
+    __DEBUG__(2,"All I hear is bzzzz bzzzzzzzzzzzz...");
+    __ERROR__("Oh no! error #%d occured: The world stopped turning :(",052);
     return EXIT_SUCCESS;
 }

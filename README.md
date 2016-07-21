@@ -25,20 +25,20 @@ Include t_error.h in your project, nothing much you need to do.
 To assert an error in your code:
 ```
 ...
-ERROR("Some error nr. %d",91);
+__ERROR__("Some error nr. %d",91);
 ...
 ```
 To assert a warning in your code:
 ```
 ...
-WARNING("Some warning nr. %d",92);
+__WARNING__("Some warning nr. %d",92);
 ...
 ```
 To print debug messages in your code:
 ```
 ...
-DEBUG(0,"Some level 0 debug message nr. %d",93);
-DEBUG(1,"Some level 1 debug message nr. %d",94);
+__DEBUG__(0,"Some level 0 debug message nr. %d",93);
+__DEBUG__(1,"Some level 1 debug message nr. %d",94);
 ...
 ```
 Where initial integer is the debug level.
